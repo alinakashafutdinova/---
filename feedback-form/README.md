@@ -29,33 +29,3 @@ feedback-form/
 `get_headers()`. По умолчанию запрашиваются заголовки `https://mospolytech.ru`,
 но URL можно изменить через форму на странице.
 
-## Локальный запуск
-
-Для работы нужен PHP (страница `result.php` использует функцию `get_headers`).
-В корне проекта выполните:
-
-```bash
-php -S localhost:8000
-```
-
-Откройте `http://localhost:8000` в браузере.
-
-## Загрузка в репозиторий
-
-```bash
-git init
-git add .
-git commit -m "Feedback form: initial commit"
-git branch -M main
-git remote add origin <URL вашего репозитория>
-git push -u origin main
-```
-
-## Деплой на хостинг
-
-Подойдёт любой хостинг с поддержкой PHP (например, Beget, Timeweb, REG.RU,
-000webhost). Загрузите все файлы в корень публичной папки (`public_html`
-или `www`) через FTP/SFTP или панель управления.
-
-Убедитесь, что в настройках PHP включена директива `allow_url_fopen=On` —
-она нужна для работы `get_headers()` с внешними URL.
